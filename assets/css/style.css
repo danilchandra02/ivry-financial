@@ -7,6 +7,7 @@
   list-style-type: none;
   width: 20%;
   position: relative;
+  font-size: 16px;
   /* background-color: #e9ecef;
 		color: #b0b0b0; */
 }
@@ -16,12 +17,13 @@
   counter-increment: step;
   width: 40px;
   height: 40px;
-  border: 1px solid #ddd;
+  border: 7px solid #ddd;
   display: block;
   text-align: center;
   margin: 0 auto 10px auto;
   border-radius: 50%;
   background-color: white;
+  line-height: 25px;
 }
 
 .stepper li:after {
@@ -37,5 +39,48 @@
 
 .stepper li:first-child:after {
   content: none;
+}
+
+.stepper li.active {
+  color: green;
+  font-weight: bold;
+}
+
+.stepper li.active:before {
+  border-color: green;
+}
+
+.navbar-brand {
+  left: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.questions {
+  counter-reset: step;
+}
+
+.questions .card.qn {
+  position: relative;
+}
+
+.questions .card.qn label {
+  font-weight: 700;
+}
+
+.questions .card.qn:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  line-height: 100%;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
